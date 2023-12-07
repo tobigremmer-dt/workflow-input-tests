@@ -32,7 +32,7 @@ jobs:
       - shell: bash
         env:
           # TEST_SECRET: ${{ secrets.TEST_SECRET_NAME }}
-          TEST_SECRET: "valid"
+          TEST_SECRET: "_valid"
         run: |
           if [ "$TEST_SECRET" = "valid" ]; then
             echo "TEST_SECRET has the value 'valid'"
