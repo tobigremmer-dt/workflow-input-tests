@@ -33,4 +33,5 @@ jobs:
         env:
           TEST_SECRET: ${{ secrets.TEST_SECRET_NAME }}
         run: |
-          echo "$TEST_SECRET"
+          n=${#TEST_SECRET}
+          echo "Length of the string is : $n "
