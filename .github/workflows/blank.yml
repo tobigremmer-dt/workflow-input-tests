@@ -31,7 +31,11 @@ jobs:
       - uses: actions/checkout@v3
       - shell: bash
         env:
-          TEST_SECRET: ${{ secrets.TEST_SECRET_NAME }}
+          # TEST_SECRET: ${{ secrets.TEST_SECRET_NAME }}
+          TEST_SECRET: "valid"
         run: |
-          n=${#TEST_SECRET}
-          echo "Length of the string is : $n "
+          if [ "$TEST_SECRET" = "valid" ]; then
+            echo "TEST_SECRET has the value 'valid'"
+          else
+            echo "TEST_SECRET has a different value"
+          fi
