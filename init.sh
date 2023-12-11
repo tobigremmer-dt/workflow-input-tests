@@ -25,7 +25,7 @@ ln -s /home/$ACE_BOX_USER/.local/bin/ansible-galaxy /usr/bin/ansible-galaxy
 ln -s /home/$ACE_BOX_USER/.local/bin/ansible-playbook /usr/bin/ansible-playbook
 
 echo "INIT - Installing Ansible Collections..."
-ansible-galaxy collection install https://storage.googleapis.com/ace-box-public-roles/ace_box-core-$ACE_BOX_VERSION.tar.gz
+ANSIBLE_COLLECTIONS_PATH=/home/$ACE_BOX_USER/.ansible/collections ansible-galaxy collection install https://storage.googleapis.com/ace-box-public-roles/ace_box-core-$ACE_BOX_VERSION.tar.gz
 
 # TBD: Installing additional collections
 
