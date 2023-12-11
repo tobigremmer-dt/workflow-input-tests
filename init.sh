@@ -24,4 +24,9 @@ ln -s /home/$ACE_BOX_USER/.local/bin/ansible /usr/bin/ansible
 ln -s /home/$ACE_BOX_USER/.local/bin/ansible-galaxy /usr/bin/ansible-galaxy
 ln -s /home/$ACE_BOX_USER/.local/bin/ansible-playbook /usr/bin/ansible-playbook
 
-# echo "ACE-Box version $ACE_BOX_VERSION will be deployed"
+echo "INIT - Installing Ansible Collections..."
+ansible-galaxy collection install https://storage.googleapis.com/ace-box-public-roles/ace_box-core-$ACE_BOX_VERSION.tar.gz
+
+# TBD: Installing additional collections
+
+# TBD: Installing ACE-CLI
